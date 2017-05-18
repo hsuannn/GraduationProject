@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using System.IO.Ports;
+using System.IO.Ports;
 
 public class TutScript : MonoBehaviour {
 
 	public float speed;
 	private float amountToMove;
-/*	
+
 	// check serial port (Arduino)
 	SerialPort sp = new SerialPort("/dev/cu.usbmodem1421", 115200);
 
@@ -43,5 +43,5 @@ public class TutScript : MonoBehaviour {
 			//do something here...
 		}
 	}
-	*/
+
 }
