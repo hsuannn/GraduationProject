@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ghost : MonoBehaviour {
 
     public Image myPanel;
-    float fadeTime = 3f;
+    float fadeTime = 1f;
     Color colorToFadeTo;
  
     float ghosttime = 2f;
@@ -26,7 +26,7 @@ public class ghost : MonoBehaviour {
 		myPanel.GetComponent<CanvasRenderer> ().SetAlpha (0.0f);
 		myPanel.GetComponent<RectTransform>().localScale = new Vector2(ghostscale,ghostscale);
 		myPanel.GetComponent<RectTransform>().localPosition = new Vector3(ghostpostion_x,ghostpostion_y,0);
-		myPanel.GetComponent<Image>().color = new Color(0.6f,0.2f,0.2f,Random.Range (0.3f, 1f));
+		myPanel.GetComponent<Image>().color = new Color(0.6f,0.2f,0.2f,Random.Range (0.5f, 1f));
 		//myPanel.transform.
      	   yield return new WaitForSeconds(s);
         myPanel.GetComponent<CanvasRenderer>().SetAlpha(1.0f);
@@ -40,9 +40,9 @@ public class ghost : MonoBehaviour {
         colorToFadeTo = new Color(1f, 1f, 1f, 0f);
         Random.seed = System.Guid.NewGuid().GetHashCode();
         ghostappear = Random.Range(15,50);
-		ghostscale = Random.Range (0.8f, 3f);
+		ghostscale = Random.Range (1f, 3f);
 		ghostpostion_x = Random.Range (-400, 400);
-		ghostpostion_y = Random.Range (-400, 400);
+		ghostpostion_y = Random.Range (-500, 300);
     }
  
     // Update is called once per frame
@@ -75,9 +75,9 @@ public class ghost : MonoBehaviour {
         if (time_i >= ghostappear)
         {
             ghostappear = Random.Range(15, 30);
-			ghostscale = Random.Range (0.8f, 3f);
+			ghostscale = Random.Range (1f, 3f);
 			ghostpostion_x = Random.Range (-400, 400);
-			ghostpostion_y = Random.Range (-400, 400);
+			ghostpostion_y = Random.Range (-500, 300);
             count = 2;
             time_f = 0;
         }
