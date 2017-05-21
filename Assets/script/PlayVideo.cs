@@ -8,6 +8,12 @@ public class PlayVideo : MonoBehaviour {
 	public MovieTexture movTexture; //電影材質
 	private AudioSource movAudio; //影片音軌
 
+	public GameObject Beep;
+	private AudioSource beepAudio;
+
+	public GameObject Scream;
+	private AudioSource screamAudio;
+
 	bool playedOnce = false;
 
 	// Use this for initialization
@@ -15,6 +21,8 @@ public class PlayVideo : MonoBehaviour {
 		Video.GetComponent<Renderer>().material.mainTexture = movTexture;
 		movTexture.loop = false;
 		movAudio = Video.GetComponent<AudioSource>();
+		beepAudio = Beep.GetComponent<AudioSource>();
+		screamAudio = Scream.GetComponent<AudioSource>();
 		Video.SetActive (false);
 		Footprint.SetActive (false);
 		Code.SetActive (false);
@@ -33,14 +41,16 @@ public class PlayVideo : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
 			//GetComponent<AudioSource>().Pause();
-			movTexture.Pause();
-			movAudio.Pause();
+			//movTexture.Pause();
+			//movAudio.Pause();
+			beepAudio.Play ();
 		}
 		if (Input.GetKeyDown(KeyCode.F3))
 		{
 			//GetComponent<AudioSource>().Stop();
-			movTexture.Stop();
-			movAudio.Stop();
+			//movTexture.Stop();
+			//movAudio.Stop();
+			screamAudio.Play();
 		}
 		if (Input.GetKeyDown(KeyCode.F4))
 		{

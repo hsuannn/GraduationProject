@@ -38,8 +38,8 @@ public class ghost : MonoBehaviour {
  
         myPanel.GetComponent<CanvasRenderer>().SetAlpha(0.0f);
         colorToFadeTo = new Color(1f, 1f, 1f, 0f);
-        //Random.seed = System.Guid.NewGuid().GetHashCode();
-		Random.state = System.Guid.NewGuid().GetHashCode();
+        Random.seed = System.Guid.NewGuid().GetHashCode();
+		//Random.state = System.Guid.NewGuid().GetHashCode();
         ghostappear = Random.Range(15,50);
 		ghostscale = Random.Range (1f, 3f);
 		ghostpostion_x = Random.Range (-400, 400);
