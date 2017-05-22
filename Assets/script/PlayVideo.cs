@@ -78,6 +78,10 @@ public class PlayVideo : MonoBehaviour {
 			WallCode.SetActive (true);
 			LastCode.SetActive (true);
 		}
+		if (Input.GetKeyDown (KeyCode.F6)) 
+		{
+			Footprint.SetActive (true);
+		}
 
 	}
 }
