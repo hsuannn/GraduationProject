@@ -17,7 +17,7 @@ public class PlayVideo : MonoBehaviour {
 	public GameObject Scream;
 	private AudioSource screamAudio;
 
-	public GameObject WallCode, LastCode;
+	public GameObject WallCode, LastCode, pic114;
 
 	bool playedOnce = false;
 
@@ -36,6 +36,7 @@ public class PlayVideo : MonoBehaviour {
 		Footprint.SetActive (false);
 		WallCode.SetActive (false);
 		LastCode.SetActive (false);
+		pic114.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -80,7 +81,7 @@ public class PlayVideo : MonoBehaviour {
 		}
 		if (Input.GetKeyDown (KeyCode.F6)) 
 		{
-			Footprint.SetActive (true);
+			pic114.SetActive (true);
 		}
 
 	}
